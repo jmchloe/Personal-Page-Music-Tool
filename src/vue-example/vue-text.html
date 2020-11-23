@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text指令</title>
+    <!-- 设置文本值
+    指令内部可以写表达式
+    默认写法替换全部内容，差值表达式替换部分内容 -->
+</head>
+
+<body>
+    <div id="app">
+        <h2 v-text="msg+'!'"></h2>
+        <h2 v-text="info"></h2>
+        <h2>{{msg}}江门</h2>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                msg: "hello world",
+                info: "前端课程"
+            }
+        })
+    </script>
+</body>
+
+</html>

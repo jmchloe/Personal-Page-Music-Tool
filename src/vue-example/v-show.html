@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>v-show</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="button" value="切换状态" @click="changeIsShow">
+        <img v-show="isShow" src="C:\Users\Administrator\Desktop\timg.jpg" alt="狂三">
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                isShow: false
+            },
+            methods: {
+                changeIsShow: function() {
+                    this.isShow = !this.isShow;
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

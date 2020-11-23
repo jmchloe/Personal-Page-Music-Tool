@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue-mode</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <input type="button" value="修改msg" @click="setMsg"> -->
+        <!-- <input type="text" v-model="msg"> -->
+        <input type="text" v-model="answer">
+
+        <!-- <h2 :style="{color: cc}">{{msg}}</h2> -->
+        <h2 :style="styleObj" v-text="msg"></h2>
+
+        <h2>{{answer}}</h2>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                msg: "hello world",
+                answer: "ff",
+                // cc: "red"
+                styleObj: {
+                    color: "red",
+                    'font-size': '20px'
+                }
+            },
+            methods: {
+                // setMsg: function() {
+                //     this.msg = "hello vue";
+            }
+        })
+    </script>
+</body>
+
+</html>
